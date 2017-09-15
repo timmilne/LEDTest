@@ -10,12 +10,6 @@ A couple of python scripts to test the LED brightness with different resistors o
 ```
 #> sudo nano /etc/rc.local
 
-# Print the IP address
-_IP=$(hostname -I) || true
-if [ "$_IP" ]; then
-  printf "My IP adress is %s\n" "$_IP"
-fi
-
 # Run the LED cycle tester
 printf "Starting Pi LED Tester..."
 python /home/pi/programs/ledtest/led_cycle.py &
